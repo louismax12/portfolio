@@ -547,7 +547,7 @@ export default function Home() {
           {/* PT Surya Multi Indopack Job Card */}
           <div className="relative group">
             <div className="absolute left-[-41px] top-1.5 w-6 h-6 rounded-full bg-[#0a0b0e] border-[3px] border-[#a855f7] z-10 transition-transform duration-300 group-hover:scale-125" />
-            <div className="font-mono text-xs text-zinc-500 mb-2">Nov 2025 - Feb 2026</div>
+            <div className="font-mono text-xs text-zinc-500 mb-2">Nov 2025 - Mar 2026</div>
             
             <div className="bg-[#12141b]/65 border border-white/5 rounded-2xl p-6 md:p-8 backdrop-blur-md transition-all duration-300 hover:translate-y-[-4px] hover:border-white/10 hover:shadow-2xl">
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
