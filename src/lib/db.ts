@@ -1,11 +1,20 @@
 import fs from 'fs';
 import path from 'path';
 
-const dataDir = path.join(process.cwd(), 'data');
-if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir);
+const isVercel = Boolean(process.env.VERCEL);
+const dataDir = isVercel
+  ? path.join(process.env.TMPDIR || '/tmp', 'data')
+  : path.join(process.cwd(), 'data');
+if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
 
 const jsonPath = path.join(dataDir, 'contacts.json');
-if (!fs.existsSync(jsonPath)) fs.writeFileSync(jsonPath, JSON.stringify({ nextId: 1, contacts: [] }, null, 2));
+if (!fs.existsSync(jsonPath)) {
+  try {
+    fs.writeFileSync(jsonPath, JSON.stringify({ nextId: 1, contacts: [] }, null, 2));
+  } catch (err) {
+    console.warn('Could not create contacts.json in dataDir:', err);
+  }
+}
 
 type Contact = {
   id: number;

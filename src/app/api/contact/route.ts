@@ -53,8 +53,17 @@ export async function POST(req: Request) {
       }
     }
 
+    // If SMTP is not configured, provide a clear error when debugging is enabled.
+    if (!(SMTP_HOST && SMTP_USER && SMTP_PASS)) {
+      emailError = 'SMTP configuration missing (SMTP_HOST/SMTP_USER/SMTP_PASS)';
+    }
+
+    const DEBUG_EMAIL = process.env.DEBUG_EMAIL === 'true';
     const resBody: any = { ok: true, id, emailSent };
-    if (process.env.NODE_ENV !== 'production' && emailError) resBody.emailError = emailError;
+    // Expose emailError when in dev or when DEBUG_EMAIL=true (safe temporary debugging)
+    if ((process.env.NODE_ENV !== 'production' || DEBUG_EMAIL) && emailError) {
+      resBody.emailError = emailError;
+    }
     return NextResponse.json(resBody);
   } catch (err) {
     console.error('Contact API error:', err);
