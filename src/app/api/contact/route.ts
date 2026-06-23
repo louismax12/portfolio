@@ -12,8 +12,19 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
+
     const created_at = new Date().toISOString();
-    const id = insertContact({ name, email, subject, message, created_at });
+    let id = null;
+    
+    try {
+      // Jika penulisan ke file JSON gagal atau error di Vercel, kode tidak akan crash
+      id = insertContact({ name, email, subject, message, created_at });
+    } catch (dbErr) {
+      // Hanya mencetak error di log Vercel tanpa menghentikan proses kirim email
+      console.warn('Penyimpanan JSON gagal di serverless, lanjut mengirim email:', dbErr);
+      id = Date.now().toString(); // ID cadangan agar sisa kode di bawah tidak error
+    }
+
 
     // Try to send email if SMTP config exists. Use dynamic import so build won't fail when nodemailer is not installed.
     const SMTP_HOST = process.env.SMTP_HOST;
