@@ -30,8 +30,8 @@ export async function POST(req: Request) {
         const nodemailer = await import('nodemailer');
         const transporter = nodemailer.createTransport({
           host: SMTP_HOST,
-          port: Number(SMTP_PORT) || 587,
-          secure: Number(SMTP_PORT) === 465,
+          port: parseInt(process.env.SMTP_PORT || '465'),
+          secure: true,
           auth: {
             user: SMTP_USER,
             pass: SMTP_PASS,
