@@ -1,0 +1,99 @@
+{
+  "blueprint_metadata": {
+    "project_name": "Multi-Tenant E-Procurement & Client Hosting Architecture",
+    "target_platform": "Google Cloud Platform (GCP)",
+    "infrastructure_type": "All-in-One Single Server (Compute Engine)",
+    "recommended_instance_type": "e2-medium",
+    "specs": {
+      "vcpu": 2,
+      "ram_gb": 4,
+      "os": "Ubuntu Server (Linux)"
+    }
+  },
+  "architecture_components": {
+    "web_server": {
+      "software": "Apache",
+      "routing_mechanism": "Virtual Hosts",
+      "isolation_strategy": "Separate DocumentRoot per client in /var/www/",
+      "security_layer": "Certbot Let's Encrypt (Automated Multi-Domain SSL)"
+    },
+    "database_server": {
+      "software": "MySQL / MariaDB",
+      "isolation_strategy": "Isolated Database and unique non-root DB User per tenant",
+      "engine_optimization_rules": [
+        {
+          "client_type": "Read-Heavy / Landing Pages / Cafe Websites",
+          "recommended_engine": "MyISAM",
+          "rationale": "High read performance, zero foreign key overhead, significantly lower RAM consumption."
+        },
+        {
+          "client_type": "Transactional / Financial / Office Systems (E-Procurement, Koperasi, Asuransi)",
+          "recommended_engine": "InnoDB",
+          "rationale": "Strict ACID compliance, Row-Level Locking, strict Foreign Key data integrity validation."
+        }
+      ]
+    },
+    "os_level_optimization": {
+      "swap_memory": {
+        "recommended_size": "2GB - 4GB",
+        "purpose": "Prevent Out-of-Memory (OOM) crashes during concurrent spikes from multi-tenant traffic."
+      },
+      "backup_strategy": "Automated disk snapshots via GCP Persistent Disk configuration."
+    }
+  },
+  "tenant_deployment_manifest": {
+    "core_system": {
+      "name": "E-Procurement RKZ",
+      "sub_modules": ["spu_h (Header)", "spu_d (Detail)", "surat_jalan", "pembayaran"],
+      "database": "material",
+      "engine": "InnoDB (migratable to MyISAM via ALTER ENGINE if requested by enterprise stakeholders)"
+    },
+    "freelance_clients": [
+      {
+        "domain": "cafngagel.com",
+        "alias": "://cafngagel.com",
+        "doc_root": "/var/www/caffe_ngagel",
+        "database": "db_ngagel",
+        "db_user": "user_ngagel"
+      },
+      {
+        "domain": "kertajayakopi.com",
+        "alias": "://kertajayakopi.com",
+        "doc_root": "/var/www/caffe_kertajaya",
+        "database": "db_kertajaya",
+        "db_user": "user_kertajaya"
+      },
+      {
+        "domain": "kopisbymanyar.com",
+        "alias": "://kopisbymanyar.com",
+        "doc_root": "/var/www/caffe_manyar",
+        "database": "db_manyar",
+        "db_user": "user_manyar"
+      },
+      {
+        "domain": "niagaasur.com",
+        "alias": "://niagaasur.com",
+        "doc_root": "/var/www/asuransi_niaga",
+        "database": "db_niaga",
+        "db_user": "user_niaga"
+      },
+      {
+        "domain": "merahputihkop.com",
+        "alias": "://merahputihkop.com",
+        "doc_root": "/var/www/koperasi_pintar",
+        "database": "db_koperasi",
+        "db_user": "user_koperasi"
+      }
+    ]
+  },
+  "deployment_steps_blueprint": [
+    "Step 1: Provision e2-medium instance with Ubuntu Server on Google Compute Engine.",
+    "Step 2: Assign a Static External IP Address to the instance.",
+    "Step 3: Update DNS A-Records on client registrars (Hostinger, etc.) pointing '@' to the Static IP.",
+    "Step 4: Install LAMP Stack (Apache, MySQL, PHP) via terminal.",
+    "Step 5: Create isolated directories in /var/www/ and databases in MySQL with unique users.",
+    "Step 6: Configure Apache Virtual Host files (.conf) for each domain in /etc/apache2/sites-available/.",
+    "Step 7: Enable sites via 'a2ensite' and reload Apache.",
+    "Step 8: Execute Certbot to automatically apply and configure SSL certificates across all active domains."
+  ]
+}
