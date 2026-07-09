@@ -204,6 +204,23 @@ export default function Home() {
     return "Web Developer & IT/AI Specialist";
   };
 
+  const projectsData = [
+  {
+    title: "Sistem Deteksi APD Real-Time Berbasis IoT",
+    subtitle: "Tugas Akhir - Ilmu Informatika",
+    description: "Sistem pengawasan keselamatan kerja otomatis menggunakan Computer Vision (YOLOv11) yang ditanam pada Raspberry Pi untuk mendeteksi penggunaan APD (helm, rompi, masker, dll.) di area konstruksi dan mengirim notifikasi pelanggaran secara instan ke Telegram.",
+    tags: ["YOLOv11", "Raspberry Pi", "IoT", "Mikrotik", "Telegram Bot API", "Deep Learning"],
+    videoUrl: "https://youtu.be/ZnzTAP8yoY8",
+    architecture: {
+      sensor: "Kamera Logitech C922",
+      edgeDevice: "Raspberry Pi (Otak Sistem / Monitoring)",
+      network: "Mikrotik Routerboard RB941 (IP: 192.168.2.50)",
+      backendServer: "Laptop MSI (Backend & Model Inference)"
+    },
+    metrics: "Pengukuran akurasi menggunakan F1-Score dengan pengujian pada kondisi pencahayaan siang hari."
+  }
+];
+
   return (
     <div className="relative min-h-screen">
       
