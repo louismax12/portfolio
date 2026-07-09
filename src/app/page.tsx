@@ -677,7 +677,16 @@ export default function Home() {
                     <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
                       Riset sistem keselamatan kerja (K3) pintar untuk mendeteksi penggunaan Alat Pelindung Diri (APD) pekerja secara real-time pada kamera CCTV.
                     </p>
-                    
+                    <div className="relative aspect-video rounded-xl overflow-hidden shadow-lg border border-slate-800">
+                      <iframe
+                        className="w-full h-full"
+                        src="https://youtube.com"
+                        title="Demonstrasi Proyek Deteksi APD YOLOv11 Raspberry Pi"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+
                     {/* Visual pipeline diagram inside card (Tailwind build) */}
                     <div className="flex items-center justify-between bg-black/30 border border-white/5 rounded-2xl p-4 mb-6">
                       <div className="flex flex-col items-center gap-1.5 text-center flex-1">
