@@ -677,14 +677,15 @@ export default function Home() {
                     <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
                       Riset sistem keselamatan kerja (K3) pintar untuk mendeteksi penggunaan Alat Pelindung Diri (APD) pekerja secara real-time pada kamera CCTV.
                     </p>
-                    <div className="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-900 border border-slate-800">
-                      <iframe
-                        className="w-full h-full"
-                        src="https://youtube.com"
-                        title="Deteksi APD Otomatis (PPE Detection) menggunakan YOLO v11"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-slate-800 bg-zinc-950 shadow-2xl">
+                      <iframe 
+                        className="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/ZnzTAP8yoY8" 
+                        title="Demonstrain My Project Personal Protective Equipment with Train YOLOv11 and Rassbery Pi" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerPolicy="strict-origin-when-cross-origin" 
                         allowFullScreen
-                        loading="lazy"
                       ></iframe>
                     </div>
                     {/* Visual pipeline diagram inside card (Tailwind build) */}
