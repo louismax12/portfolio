@@ -778,7 +778,7 @@ export default function Home() {
                         </div>
                         <div className="flex-1 text-center">
                           <span className="bg-[#0a0b0e]/80 text-zinc-400 font-mono text-[10px] px-4 py-1 rounded-full border border-white/5 inline-block">
-                            http://prm.rkz-surabaya.local
+                            https://komsosmtb.fun/prm_rkz/
                           </span>
                         </div>
                       </div>
@@ -789,6 +789,30 @@ export default function Home() {
                           fill 
                           className="object-cover object-top group-hover:scale-105 transition-transform duration-500" 
                         />
+                      </div>
+                    </div>
+
+                    {/* Screenshot Gallery Thumbnails for PRM RKZ */}
+                    <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 mb-6">
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/prm_rkz_preview_login.png" alt="Portal Login PRM RKZ" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-[#60a5fa] font-semibold">Portal Login</span>
+                      </div>
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/prm_rkz_preview.png" alt="Riwayat Pembelian Kasir Sync HIS" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-zinc-300">Sync Kasir HIS</span>
+                      </div>
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/prm_rkz_preview_datapaket.png" alt="Data Paket Aktif Pasien" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-zinc-300">Data Paket</span>
+                      </div>
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/prm_rkz_preview_pemakaiansesi.png" alt="Detail Pemakaian Sesi Terapi" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-[#10b981] font-semibold">Pemakaian Sesi</span>
+                      </div>
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/prm_rkz_preview_master.png" alt="Master Data Konfigurasi" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-zinc-300">Master Data</span>
                       </div>
                     </div>
                     
