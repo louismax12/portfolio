@@ -886,7 +886,7 @@ export default function Home() {
                     </div>
 
                     {/* Screenshot Gallery Thumbnails for SP Umum */}
-                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                    <div className="grid grid-cols-3 sm:grid-cols-6 gap-2.5 mb-6">
                       <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
                         <Image src="/img/sp_umum_preview_login.png" alt="Portal Login SP Umum" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
                         <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-[#c084fc] font-semibold">Portal Login</span>
@@ -896,8 +896,16 @@ export default function Home() {
                         <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-zinc-300">Pilih Role</span>
                       </div>
                       <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/sp_umum_preview_gantirole.png" alt="Switch Role SP Umum" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-zinc-300">Ganti Role</span>
+                      </div>
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
                         <Image src="/img/sp_umum_preview_form.png" alt="Form Input PO SP Umum" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
                         <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-zinc-300">Form PO</span>
+                      </div>
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/sp_umum_preview_pembayaran.png" alt="Pengajuan Pembayaran SP Umum" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-[#10b981] font-semibold">Bayar SP</span>
                       </div>
                       <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
                         <Image src="/img/sp_umum_preview_approval.png" alt="Approval Progress & Audit Trail" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
