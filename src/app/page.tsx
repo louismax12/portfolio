@@ -673,21 +673,43 @@ export default function Home() {
                       Platform digital E-Menu dan sistem reservasi meja interaktif untuk Cafe &amp; Resto Avere. Menyajikan pemesanan digital yang intuitif, pencarian cepat, filter kategori, serta antarmuka modern yang ultra responsif.
                     </p>
                     
-                    {/* Visual Pipeline / Feature Box */}
-                    <div className="flex flex-col sm:flex-row items-center justify-between bg-black/30 border border-white/5 rounded-2xl p-4 mb-6 gap-3 sm:gap-0">
-                      <div className="flex flex-col items-center gap-1 text-center flex-1">
-                        <span className="text-[10px] font-mono text-[#00f2fe] font-semibold">1. E-Menu Visual</span>
-                        <span className="text-[10px] text-zinc-400">Katalog Makanan &amp; Minuman</span>
+                    {/* Real UI Screenshot Frame Bar */}
+                    <div className="w-full bg-[#0a0b0e] border border-white/10 rounded-2xl overflow-hidden shadow-2xl mb-6 group">
+                      <div className="bg-[#181a20] px-4 py-2 flex items-center gap-2 border-b border-white/5">
+                        <div className="flex gap-1.5">
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+                        </div>
+                        <div className="flex-1 text-center">
+                          <span className="bg-[#0a0b0e]/80 text-zinc-400 font-mono text-[10px] px-4 py-1 rounded-full border border-white/5 inline-block">
+                            https://avere-menubook.vercel.app
+                          </span>
+                        </div>
                       </div>
-                      <div className="text-zinc-500 font-bold text-xs">➔</div>
-                      <div className="flex flex-col items-center gap-1 text-center flex-1">
-                        <span className="text-[10px] font-mono text-[#4facfe] font-semibold">2. Dynamic Filter</span>
-                        <span className="text-[10px] text-zinc-400">Filter Kategori &amp; Promo</span>
+                      <div className="relative w-full h-[220px] md:h-[260px] overflow-hidden bg-[#0a0b0e]">
+                        <Image 
+                          src="/img/avere_preview.png" 
+                          alt="Avere E-Menu Real UI Screenshot" 
+                          fill 
+                          className="object-cover object-top group-hover:scale-105 transition-transform duration-500" 
+                        />
                       </div>
-                      <div className="text-zinc-500 font-bold text-xs">➔</div>
-                      <div className="flex flex-col items-center gap-1 text-center flex-1">
-                        <span className="text-[10px] font-mono text-[#10b981] font-semibold">3. Table Reservation</span>
-                        <span className="text-[10px] text-zinc-400">Form Booking Meja Real-time</span>
+                    </div>
+
+                    {/* Screenshot Gallery Thumbnails */}
+                    <div className="grid grid-cols-3 gap-3 mb-6">
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/avere_preview_starter.png" alt="Avere Starter Menu" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-zinc-300">Starter</span>
+                      </div>
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/avere_preview_drinks.png" alt="Avere Drinks Menu" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-zinc-300">Drinks</span>
+                      </div>
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/avere_preview_dessert.png" alt="Avere Dessert Menu" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-zinc-300">Dessert</span>
                       </div>
                     </div>
 
@@ -741,6 +763,30 @@ export default function Home() {
                     <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
                       Sistem manajemen paket terapi rehabilitasi medis yang mengintegrasikan SPA frontend modern berbasis Material Design 3 (MD3) dengan legacy Hospital Information System (HIS) <code className="text-[#60a5fa]">dbold</code> di RS RKZ Surabaya.
                     </p>
+
+                    {/* Real UI Screenshot Frame Bar for PRM RKZ */}
+                    <div className="w-full bg-[#0a0b0e] border border-white/10 rounded-2xl overflow-hidden shadow-2xl mb-6 group">
+                      <div className="bg-[#181a20] px-4 py-2 flex items-center gap-2 border-b border-white/5">
+                        <div className="flex gap-1.5">
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
+                        </div>
+                        <div className="flex-1 text-center">
+                          <span className="bg-[#0a0b0e]/80 text-zinc-400 font-mono text-[10px] px-4 py-1 rounded-full border border-white/5 inline-block">
+                            http://prm.rkz-surabaya.local
+                          </span>
+                        </div>
+                      </div>
+                      <div className="relative w-full h-[220px] md:h-[260px] overflow-hidden bg-[#0a0b0e]">
+                        <Image 
+                          src="/img/prm_rkz_preview.png" 
+                          alt="PRM RKZ Real UI Dashboard Screenshot" 
+                          fill 
+                          className="object-cover object-top group-hover:scale-105 transition-transform duration-500" 
+                        />
+                      </div>
+                    </div>
                     
                     {/* Workflow Diagram Box */}
                     <div className="flex flex-col sm:flex-row items-center justify-between bg-black/30 border border-white/5 rounded-2xl p-4 mb-6 gap-3 sm:gap-0">
