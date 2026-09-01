@@ -21,7 +21,8 @@ import {
   Camera,
   AlertTriangle,
   FileText,
-  Sparkles
+  Sparkles,
+  ExternalLink
 } from "lucide-react";
 
 // Inline Custom SVG components for Brand Icons since Lucide removed them
@@ -683,7 +684,7 @@ export default function Home() {
                         </div>
                         <div className="flex-1 text-center">
                           <span className="bg-[#0a0b0e]/80 text-zinc-400 font-mono text-[10px] px-4 py-1 rounded-full border border-white/5 inline-block">
-                            https://avere-menubook.vercel.app
+                            https://komsosmtb.fun/avere/
                           </span>
                         </div>
                       </div>
@@ -738,14 +739,24 @@ export default function Home() {
                         </span>
                       ))}
                     </div>
-                    <a 
-                      href="https://github.com/louismax12/avere_menu_boking.git" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="self-start text-xs font-semibold text-[#00f2fe] border border-[#00f2fe]/30 rounded-xl px-5 py-2.5 bg-[#00f2fe]/5 transition-all duration-300 hover:bg-[#00f2fe] hover:text-black hover:shadow-[0_0_15px_rgba(0,242,254,0.4)] flex items-center gap-2"
-                    >
-                      <GithubIcon className="w-4 h-4" /> Buka GitHub Repository
-                    </a>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <a 
+                        href="https://komsosmtb.fun/avere/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-xs font-semibold text-black bg-[#00f2fe] border border-[#00f2fe] rounded-xl px-5 py-2.5 transition-all duration-300 hover:bg-[#00f2fe]/90 hover:shadow-[0_0_15px_rgba(0,242,254,0.5)] flex items-center gap-2"
+                      >
+                        <ExternalLink size={14} /> Kunjungi Live Demo
+                      </a>
+                      <a 
+                        href="https://github.com/louismax12/avere_menu_boking.git" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-xs font-semibold text-[#00f2fe] border border-[#00f2fe]/30 rounded-xl px-5 py-2.5 bg-[#00f2fe]/5 transition-all duration-300 hover:bg-[#00f2fe] hover:text-black hover:shadow-[0_0_15px_rgba(0,242,254,0.4)] flex items-center gap-2"
+                      >
+                        <GithubIcon className="w-4 h-4" /> Buka GitHub Repository
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -859,14 +870,24 @@ export default function Home() {
                         </span>
                       ))}
                     </div>
-                    <a 
-                      href="https://github.com/louismax12/prm_rkz.git" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="self-start text-xs font-semibold text-[#60a5fa] border border-[#3b82f6]/30 rounded-xl px-5 py-2.5 bg-[#3b82f6]/5 transition-all duration-300 hover:bg-[#3b82f6] hover:text-white hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] flex items-center gap-2"
-                    >
-                      <GithubIcon className="w-4 h-4" /> Buka GitHub Repository
-                    </a>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <a 
+                        href="https://komsosmtb.fun/prm_rkz/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-xs font-semibold text-white bg-[#3b82f6] border border-[#3b82f6] rounded-xl px-5 py-2.5 transition-all duration-300 hover:bg-[#3b82f6]/90 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] flex items-center gap-2"
+                      >
+                        <ExternalLink size={14} /> Kunjungi Live Demo
+                      </a>
+                      <a 
+                        href="https://github.com/louismax12/prm_rkz.git" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-xs font-semibold text-[#60a5fa] border border-[#3b82f6]/30 rounded-xl px-5 py-2.5 bg-[#3b82f6]/5 transition-all duration-300 hover:bg-[#3b82f6] hover:text-white hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] flex items-center gap-2"
+                      >
+                        <GithubIcon className="w-4 h-4" /> Buka GitHub Repository
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -980,14 +1001,24 @@ export default function Home() {
                         </span>
                       ))}
                     </div>
-                    <a 
-                      href="https://github.com/louismax12/sp_umum.git" 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="self-start text-xs font-semibold text-[#c084fc] border border-[#a855f7]/30 rounded-xl px-5 py-2.5 bg-[#a855f7]/5 transition-all duration-300 hover:bg-[#a855f7] hover:text-white hover:shadow-[0_0_15px_rgba(168,85,247,0.4)] flex items-center gap-2"
-                    >
-                      <GithubIcon className="w-4 h-4" /> Buka GitHub Repository
-                    </a>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <a 
+                        href="https://komsosmtb.fun/sp_umum/index.html" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-xs font-semibold text-white bg-[#a855f7] border border-[#a855f7] rounded-xl px-5 py-2.5 transition-all duration-300 hover:bg-[#a855f7]/90 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] flex items-center gap-2"
+                      >
+                        <ExternalLink size={14} /> Kunjungi Live Demo
+                      </a>
+                      <a 
+                        href="https://github.com/louismax12/sp_umum.git" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-xs font-semibold text-[#c084fc] border border-[#a855f7]/30 rounded-xl px-5 py-2.5 bg-[#a855f7]/5 transition-all duration-300 hover:bg-[#a855f7] hover:text-white hover:shadow-[0_0_15px_rgba(168,85,247,0.4)] flex items-center gap-2"
+                      >
+                        <GithubIcon className="w-4 h-4" /> Buka GitHub Repository
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
