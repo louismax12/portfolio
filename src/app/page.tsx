@@ -698,7 +698,11 @@ export default function Home() {
                     </div>
 
                     {/* Screenshot Gallery Thumbnails */}
-                    <div className="grid grid-cols-3 gap-3 mb-6">
+                    <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/avere_preview_kitchen.png" alt="Avere Kitchen Dashboard" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-[#00f2fe] font-semibold">Kitchen DB</span>
+                      </div>
                       <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
                         <Image src="/img/avere_preview_starter.png" alt="Avere Starter Menu" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
                         <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-zinc-300">Starter</span>
