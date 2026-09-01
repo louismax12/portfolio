@@ -196,6 +196,23 @@ export default function Home() {
     return "Web Developer & IT/AI Specialist";
   };
 
+  const projectsData = [
+  {
+    title: "Sistem Deteksi APD Real-Time Berbasis IoT",
+    subtitle: "Tugas Akhir - Ilmu Informatika",
+    description: "Sistem pengawasan keselamatan kerja otomatis menggunakan Computer Vision (YOLOv11) yang ditanam pada Raspberry Pi untuk mendeteksi penggunaan APD (helm, rompi, masker, dll.) di area konstruksi dan mengirim notifikasi pelanggaran secara instan ke Telegram.",
+    tags: ["YOLOv11", "Raspberry Pi", "IoT", "Mikrotik", "Telegram Bot API", "Deep Learning"],
+    videoUrl: "https://youtu.be/ZnzTAP8yoY8",
+    architecture: {
+      sensor: "Kamera Logitech C922",
+      edgeDevice: "Raspberry Pi (Otak Sistem / Monitoring)",
+      network: "Mikrotik Routerboard RB941 (IP: 192.168.2.50)",
+      backendServer: "Laptop MSI (Backend & Model Inference)"
+    },
+    metrics: "Pengukuran akurasi menggunakan F1-Score dengan pengujian pada kondisi pencahayaan siang hari."
+  }
+];
+
   return (
     <div className="relative min-h-screen">
       
@@ -862,7 +879,17 @@ export default function Home() {
                     <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
                       Riset sistem keselamatan kerja (K3) pintar untuk mendeteksi penggunaan Alat Pelindung Diri (APD) pekerja secara real-time pada kamera CCTV.
                     </p>
-                    
+                    <div className="relative w-full aspect-video rounded-xl overflow-hidden border border-slate-800 bg-zinc-950 shadow-2xl">
+                      <iframe 
+                        className="absolute top-0 left-0 w-full h-full"
+                        src="https://www.youtube.com/embed/ZnzTAP8yoY8" 
+                        title="Demonstrain My Project Personal Protective Equipment with Train YOLOv11 and Rassbery Pi" 
+                        frameBorder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerPolicy="strict-origin-when-cross-origin" 
+                        allowFullScreen
+                      ></iframe>
+                    </div>
                     {/* Visual pipeline diagram inside card (Tailwind build) */}
                     <div className="flex items-center justify-between bg-black/30 border border-white/5 rounded-2xl p-4 mb-6">
                       <div className="flex flex-col items-center gap-1.5 text-center flex-1">
