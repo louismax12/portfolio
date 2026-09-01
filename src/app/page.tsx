@@ -683,19 +683,29 @@ export default function Home() {
                           <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                         </div>
                         <div className="flex-1 text-center">
-                          <span className="bg-[#0a0b0e]/80 text-zinc-400 font-mono text-[10px] px-4 py-1 rounded-full border border-white/5 inline-block">
-                            https://komsosmtb.fun/avere/
-                          </span>
+                          <a 
+                            href="https://komsosmtb.fun/avere/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="bg-[#0a0b0e]/80 text-[#00f2fe] hover:text-white hover:underline font-mono text-[10px] px-4 py-1 rounded-full border border-[#00f2fe]/30 inline-flex items-center gap-1.5 transition-colors cursor-pointer"
+                          >
+                            https://komsosmtb.fun/avere/ <ExternalLink size={10} />
+                          </a>
                         </div>
                       </div>
-                      <div className="relative w-full h-[220px] md:h-[260px] overflow-hidden bg-[#0a0b0e]">
+                      <a 
+                        href="https://komsosmtb.fun/avere/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="relative w-full h-[220px] md:h-[260px] overflow-hidden bg-[#0a0b0e] block cursor-pointer"
+                      >
                         <Image 
                           src="/img/avere_preview.png" 
                           alt="Avere E-Menu Real UI Screenshot" 
                           fill 
                           className="object-cover object-top group-hover:scale-105 transition-transform duration-500" 
                         />
-                      </div>
+                      </a>
                     </div>
 
                     {/* Screenshot Gallery Thumbnails */}
@@ -788,19 +798,29 @@ export default function Home() {
                           <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                         </div>
                         <div className="flex-1 text-center">
-                          <span className="bg-[#0a0b0e]/80 text-zinc-400 font-mono text-[10px] px-4 py-1 rounded-full border border-white/5 inline-block">
-                            https://komsosmtb.fun/prm_rkz/
-                          </span>
+                          <a 
+                            href="https://komsosmtb.fun/prm_rkz/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="bg-[#0a0b0e]/80 text-[#60a5fa] hover:text-white hover:underline font-mono text-[10px] px-4 py-1 rounded-full border border-[#3b82f6]/30 inline-flex items-center gap-1.5 transition-colors cursor-pointer"
+                          >
+                            https://komsosmtb.fun/prm_rkz/ <ExternalLink size={10} />
+                          </a>
                         </div>
                       </div>
-                      <div className="relative w-full h-[220px] md:h-[260px] overflow-hidden bg-[#0a0b0e]">
+                      <a 
+                        href="https://komsosmtb.fun/prm_rkz/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="relative w-full h-[220px] md:h-[260px] overflow-hidden bg-[#0a0b0e] block cursor-pointer"
+                      >
                         <Image 
                           src="/img/prm_rkz_preview.png" 
                           alt="PRM RKZ Real UI Dashboard Screenshot" 
                           fill 
                           className="object-cover object-top group-hover:scale-105 transition-transform duration-500" 
                         />
-                      </div>
+                      </a>
                     </div>
 
                     {/* Screenshot Gallery Thumbnails for PRM RKZ */}
@@ -919,19 +939,29 @@ export default function Home() {
                           <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                         </div>
                         <div className="flex-1 text-center">
-                          <span className="bg-[#0a0b0e]/80 text-zinc-400 font-mono text-[10px] px-4 py-1 rounded-full border border-white/5 inline-block">
-                            https://komsosmtb.fun/sp_umum/index.html
-                          </span>
+                          <a 
+                            href="https://komsosmtb.fun/sp_umum/index.html" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="bg-[#0a0b0e]/80 text-[#c084fc] hover:text-white hover:underline font-mono text-[10px] px-4 py-1 rounded-full border border-[#a855f7]/30 inline-flex items-center gap-1.5 transition-colors cursor-pointer"
+                          >
+                            https://komsosmtb.fun/sp_umum/index.html <ExternalLink size={10} />
+                          </a>
                         </div>
                       </div>
-                      <div className="relative w-full h-[220px] md:h-[260px] overflow-hidden bg-[#0a0b0e]">
+                      <a 
+                        href="https://komsosmtb.fun/sp_umum/index.html" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="relative w-full h-[220px] md:h-[260px] overflow-hidden bg-[#0a0b0e] block cursor-pointer"
+                      >
                         <Image 
                           src="/img/sp_umum_preview.png" 
                           alt="SP Umum Real UI Dashboard Screenshot" 
                           fill 
                           className="object-cover object-top group-hover:scale-105 transition-transform duration-500" 
                         />
-                      </div>
+                      </a>
                     </div>
 
                     {/* Screenshot Gallery Thumbnails for SP Umum */}
