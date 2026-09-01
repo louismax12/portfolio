@@ -47,8 +47,8 @@ export async function POST(req: Request) {
         });
 
         emailSent = true;
-      } catch (err: any) {
-        emailError = (err && err.message) || String(err);
+      } catch (err: unknown) {
+        emailError = (err instanceof Error ? err.message : String(err));
         console.warn('nodemailer not available or send failed:', err);
       }
     }
@@ -59,7 +59,7 @@ export async function POST(req: Request) {
     }
 
     const DEBUG_EMAIL = process.env.DEBUG_EMAIL === 'true';
-    const resBody: any = { ok: true, id, emailSent };
+    const resBody: Record<string, unknown> = { ok: true, id, emailSent };
     // Expose emailError when in dev or when DEBUG_EMAIL=true (safe temporary debugging)
     if ((process.env.NODE_ENV !== 'production' || DEBUG_EMAIL) && emailError) {
       resBody.emailError = emailError;
@@ -71,7 +71,7 @@ export async function POST(req: Request) {
   }
 }
 
-export async function GET(req: Request) {
+export async function GET() {
   try {
     const jsonPath = path.join(process.cwd(), 'data', 'contacts.json');
     if (!fs.existsSync(jsonPath)) {

@@ -1,0 +1,76 @@
+{
+    "nextId": 10,
+    "contacts": [{
+            "id": 1,
+            "name": "x",
+            "email": "x@gmail.com",
+            "subject": "x",
+            "message": "x",
+            "created_at": "2026-06-20T04:47:37.044Z"
+        },
+        {
+            "id": 2,
+            "name": "x",
+            "email": "lsmaximillian@gmail.com",
+            "subject": "Halo x",
+            "message": "halo x pa kabar",
+            "created_at": "2026-06-20T04:50:27.363Z"
+        },
+        {
+            "id": 3,
+            "name": "x",
+            "email": "lsmaximillian@gmail.com",
+            "subject": "x",
+            "message": "halo x",
+            "created_at": "2026-06-20T05:14:01.020Z"
+        },
+        {
+            "id": 4,
+            "name": "xv",
+            "email": "lsmaximillian@gmail.com",
+            "subject": "xcv",
+            "message": "x",
+            "created_at": "2026-06-20T05:18:05.479Z"
+        },
+        {
+            "id": 5,
+            "name": "vbv",
+            "email": "lsmaximillian@gmail.com",
+            "subject": "bvn",
+            "message": "bnm",
+            "created_at": "2026-06-20T05:20:19.349Z"
+        },
+        {
+            "id": 6,
+            "name": "tumbler",
+            "email": "lsmaximillian@gmail.com",
+            "subject": "tumbler to email louis",
+            "message": "hi whstapp people hi louis",
+            "created_at": "2026-06-20T05:27:54.564Z"
+        },
+        {
+            "id": 7,
+            "name": "arthur",
+            "email": "louis.maximillian@student.ukdc.ac.id",
+            "subject": "arthur menghubungi louis",
+            "message": "halo louis apa kabar aku mau kamu bantu buatkan website untuk cafe ku",
+            "created_at": "2026-06-20T05:29:29.453Z"
+        },
+        {
+            "id": 8,
+            "name": "josua",
+            "email": "josua@gmail.com",
+            "subject": "jos suka game nihh",
+            "message": "allooo bang louis aku baru buka cafe sama bengkel mobil nii bang bantu buatin website bang thx",
+            "created_at": "2026-06-21T14:40:38.716Z"
+        },
+        {
+            "id": 9,
+            "name": "josuaxv",
+            "email": "jos@mail.com",
+            "subject": "jos adik kakak ggwp",
+            "message": "bang louis aku bantu bang kakak ku mau jual baju korea tapi belum ada websitenya bang",
+            "created_at": "2026-06-21T15:10:53.170Z"
+        }
+    ]
+}

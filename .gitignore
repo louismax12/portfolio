@@ -8,3 +8,5 @@ yarn-debug.log*
 pnpm-debug.log*
 # OS files
 .DS_Store
+.vercel
+.env*

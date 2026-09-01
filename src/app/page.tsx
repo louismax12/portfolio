@@ -12,8 +12,6 @@ import {
   Cpu, 
   Phone, 
   Mail, 
-  MapPin, 
-  GraduationCap, 
   Send, 
   CheckCircle2, 
   Menu, 
@@ -21,9 +19,9 @@ import {
   ChevronLeft, 
   ChevronRight,
   Camera,
-  AlertCircle,
   AlertTriangle,
-  FileText
+  FileText,
+  Sparkles
 } from "lucide-react";
 
 // Inline Custom SVG components for Brand Icons since Lucide removed them
@@ -44,12 +42,6 @@ const InstagramIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-  </svg>
-);
-
-const WhatsappIcon = ({ className = "w-5 h-5" }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.458L0 .057zm6.574-3.52c1.642.975 3.256 1.488 4.966 1.489 5.39 0 9.778-4.387 9.782-9.778.002-2.611-1.015-5.066-2.864-6.918-1.849-1.85-4.303-2.868-6.917-2.869-5.39 0-9.777 4.388-9.782 9.78.001 1.782.493 3.526 1.428 5.097L2.247 21.75l5.584-1.465zM16.75 14.39c-.26-.13-1.536-.759-1.773-.845-.236-.087-.41-.13-.58.13-.17.26-.66.845-.81.996-.15.17-.3.19-.56.06-.26-.13-1.1-.405-2.096-1.284-.774-.69-1.298-1.543-1.45-1.802-.15-.258-.016-.399.115-.529.117-.117.26-.3.39-.45.13-.15.17-.26.26-.43.09-.17.04-.324-.02-.454-.06-.13-.58-1.397-.796-1.921-.21-.509-.42-.44-.58-.449-.15-.007-.323-.008-.497-.008-.174 0-.46.065-.7.33-.24.26-.917.896-.917 2.185s.938 2.53 1.07 2.7c.13.17 1.844 2.815 4.466 3.947.624.269 1.11.43 1.49.55.626.2 1.196.172 1.647.105.502-.075 1.536-.628 1.753-1.236.217-.607.217-1.127.153-1.236-.064-.11-.237-.17-.497-.3z"/>
   </svg>
 );
 
@@ -76,7 +68,7 @@ export default function Home() {
   
   // Refs
   const skillsRef = useRef<HTMLElement>(null);
-  const totalSlides = 3;
+  const totalSlides = 6;
 
   // ==========================================================================
   // EFFECT HOOKS
@@ -547,7 +539,7 @@ export default function Home() {
           {/* PT Surya Multi Indopack Job Card */}
           <div className="relative group">
             <div className="absolute left-[-41px] top-1.5 w-6 h-6 rounded-full bg-[#0a0b0e] border-[3px] border-[#a855f7] z-10 transition-transform duration-300 group-hover:scale-125" />
-            <div className="font-mono text-xs text-zinc-500 mb-2">Nov 2025 - Feb 2026</div>
+            <div className="font-mono text-xs text-zinc-500 mb-2">Nov 2025 - Mar 2026</div>
             
             <div className="bg-[#12141b]/65 border border-white/5 rounded-2xl p-6 md:p-8 backdrop-blur-md transition-all duration-300 hover:translate-y-[-4px] hover:border-white/10 hover:shadow-2xl">
               <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
@@ -605,7 +597,7 @@ export default function Home() {
           </div>
 
           {/* Carousel controls bar */}
-          <div className="flex justify-between items-center max-w-[380px] mx-auto mb-10">
+          <div className="flex justify-between items-center max-w-[420px] mx-auto mb-10">
             <button 
               onClick={handlePrevSlide}
               className="bg-[#12141b]/65 border border-white/5 text-white w-12 h-12 rounded-full flex items-center justify-center cursor-pointer transition-all hover:border-[#00f2fe] hover:text-[#00f2fe] hover:shadow-[0_0_15px_rgba(0,242,254,0.3)] hover:scale-105"
@@ -613,15 +605,15 @@ export default function Home() {
             >
               <ChevronLeft size={22} />
             </button>
-            <div className="flex gap-2">
-              {[0, 1, 2].map((idx) => (
+            <div className="flex gap-2 flex-wrap justify-center">
+              {Array.from({ length: totalSlides }).map((_, idx) => (
                 <button
                   key={idx}
                   onClick={() => setCurrentSlide(idx)}
                   className={`w-2.5 h-2.5 rounded-full cursor-pointer transition-all ${
                     currentSlide === idx 
                       ? "bg-[#00f2fe] scale-125 shadow-[0_0_8px_rgba(0,242,254,0.5)]" 
-                      : "bg-white/20"
+                      : "bg-white/20 hover:bg-white/40"
                   }`}
                   aria-label={`Go to slide ${idx + 1}`}
                 />
@@ -639,12 +631,222 @@ export default function Home() {
           {/* Outer Slider Window */}
           <div className="w-full overflow-hidden rounded-3xl">
             <div 
-              className="flex w-[300%] transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
-              style={{ transform: `translateX(${currentSlide * -33.33333}%)` }}
+              className="flex transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+              style={{ 
+                width: `${totalSlides * 100}%`,
+                transform: `translateX(${currentSlide * -(100 / totalSlides)}%)` 
+              }}
             >
               
-              {/* Slide 1: YOLO v11 Riset */}
-              <div className="w-[33.33333%] px-2.5 box-border flex justify-center">
+              {/* Slide 1: Avere E-Menu & Booking System (Gemini AI Project) */}
+              <div className="px-2.5 box-border flex justify-center" style={{ width: `${100 / totalSlides}%` }}>
+                <div className="w-full bg-[#12141b]/65 border border-[#00f2fe]/30 rounded-3xl p-8 relative flex flex-col justify-between bg-gradient-to-b from-[#00f2fe]/5 via-[#12141b]/70 to-[#12141b]/90 hover:border-[#00f2fe]/60 transition-all duration-300 shadow-xl">
+                  <div className="absolute top-6 right-8 text-[9px] font-bold tracking-widest text-[#00f2fe] bg-[#00f2fe]/10 border border-[#00f2fe]/30 rounded-full px-3 py-1 flex items-center gap-1.5 shadow-[0_0_10px_rgba(0,242,254,0.2)]">
+                    <Sparkles size={11} className="text-[#00f2fe]" /> GEMINI AI ASSISTED
+                  </div>
+                  
+                  <div className="flex flex-col">
+                    <span className="font-mono text-xs text-zinc-400 font-semibold uppercase flex items-center gap-2 mb-3">
+                      <Laptop size={14} className="text-[#00f2fe]" /> Web &amp; Booking Application
+                    </span>
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-4 pr-32">
+                      Avere E-Menu &amp; Table Booking System
+                    </h3>
+                    <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
+                      Platform digital E-Menu dan sistem reservasi meja interaktif untuk Cafe &amp; Resto Avere. Menyajikan pemesanan digital yang intuitif, pencarian cepat, filter kategori, serta antarmuka modern yang ultra responsif.
+                    </p>
+                    
+                    {/* Visual Pipeline / Feature Box */}
+                    <div className="flex flex-col sm:flex-row items-center justify-between bg-black/30 border border-white/5 rounded-2xl p-4 mb-6 gap-3 sm:gap-0">
+                      <div className="flex flex-col items-center gap-1 text-center flex-1">
+                        <span className="text-[10px] font-mono text-[#00f2fe] font-semibold">1. E-Menu Visual</span>
+                        <span className="text-[10px] text-zinc-400">Katalog Makanan &amp; Minuman</span>
+                      </div>
+                      <div className="text-zinc-500 font-bold text-xs">➔</div>
+                      <div className="flex flex-col items-center gap-1 text-center flex-1">
+                        <span className="text-[10px] font-mono text-[#4facfe] font-semibold">2. Dynamic Filter</span>
+                        <span className="text-[10px] text-zinc-400">Filter Kategori &amp; Promo</span>
+                      </div>
+                      <div className="text-zinc-500 font-bold text-xs">➔</div>
+                      <div className="flex flex-col items-center gap-1 text-center flex-1">
+                        <span className="text-[10px] font-mono text-[#10b981] font-semibold">3. Table Reservation</span>
+                        <span className="text-[10px] text-zinc-400">Form Booking Meja Real-time</span>
+                      </div>
+                    </div>
+
+                    <ul className="space-y-2 mb-6 text-sm text-zinc-400">
+                      <li className="relative pl-5 before:content-['✓'] before:absolute before:left-0 before:text-[#00f2fe] before:font-bold">
+                        Antarmuka pengguna ultra-cepat berbasis <strong>Vite</strong> + <strong>React 19</strong> dengan transisi animasi halus.
+                      </li>
+                      <li className="relative pl-5 before:content-['✓'] before:absolute before:left-0 before:text-[#00f2fe] before:font-bold">
+                        Sistem styling modern menggunakan <strong>Tailwind CSS v4</strong> &amp; komponen ikon modular dari <strong>Lucide</strong>.
+                      </li>
+                      <li className="relative pl-5 before:content-['✓'] before:absolute before:left-0 before:text-[#00f2fe] before:font-bold">
+                        Fitur booking reservasi meja &amp; pemilihan waktu kunjungan untuk meningkatkan efisiensi operasional kafe.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-col gap-4">
+                    <div className="flex flex-wrap gap-1.5">
+                      {["React 19", "Vite", "Tailwind CSS v4", "TypeScript", "Lucide Icons", "Gemini AI"].map((tag) => (
+                        <span key={tag} className="bg-white/3 border border-white/5 rounded-md px-3 py-1 text-[10px] text-zinc-400">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <a 
+                      href="https://github.com/louismax12/avere_menu_boking.git" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="self-start text-xs font-semibold text-[#00f2fe] border border-[#00f2fe]/30 rounded-xl px-5 py-2.5 bg-[#00f2fe]/5 transition-all duration-300 hover:bg-[#00f2fe] hover:text-black hover:shadow-[0_0_15px_rgba(0,242,254,0.4)] flex items-center gap-2"
+                    >
+                      <GithubIcon className="w-4 h-4" /> Buka GitHub Repository
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Slide 2: Medical Rehabilitation Package Management System (Gemini AI Project) */}
+              <div className="px-2.5 box-border flex justify-center" style={{ width: `${100 / totalSlides}%` }}>
+                <div className="w-full bg-[#12141b]/65 border border-[#3b82f6]/30 rounded-3xl p-8 relative flex flex-col justify-between bg-gradient-to-b from-[#3b82f6]/5 via-[#12141b]/70 to-[#12141b]/90 hover:border-[#3b82f6]/60 transition-all duration-300 shadow-xl">
+                  <div className="absolute top-6 right-8 text-[9px] font-bold tracking-widest text-[#60a5fa] bg-[#3b82f6]/10 border border-[#3b82f6]/30 rounded-full px-3 py-1 flex items-center gap-1.5 shadow-[0_0_10px_rgba(59,130,246,0.2)]">
+                    <Sparkles size={11} className="text-[#60a5fa]" /> GEMINI AI ASSISTED
+                  </div>
+                  
+                  <div className="flex flex-col">
+                    <span className="font-mono text-xs text-zinc-400 font-semibold uppercase flex items-center gap-2 mb-3">
+                      <Briefcase size={14} className="text-[#60a5fa]" /> Healthcare &amp; HIS Integration
+                    </span>
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-4 pr-32">
+                      Paket Rehabilitasi Medis (PRM System - RS RKZ)
+                    </h3>
+                    <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
+                      Sistem manajemen paket terapi rehabilitasi medis yang mengintegrasikan SPA frontend modern berbasis Material Design 3 (MD3) dengan legacy Hospital Information System (HIS) <code className="text-[#60a5fa]">dbold</code> di RS RKZ Surabaya.
+                    </p>
+                    
+                    {/* Workflow Diagram Box */}
+                    <div className="flex flex-col sm:flex-row items-center justify-between bg-black/30 border border-white/5 rounded-2xl p-4 mb-6 gap-3 sm:gap-0">
+                      <div className="flex flex-col items-center gap-1 text-center flex-1">
+                        <span className="text-[10px] font-mono text-[#60a5fa] font-semibold">1. Kasir / Billing HIS</span>
+                        <span className="text-[10px] text-zinc-400">Parse FCRID &amp; FCRRMUNIT</span>
+                      </div>
+                      <div className="text-zinc-500 font-bold text-xs">➔</div>
+                      <div className="flex flex-col items-center gap-1 text-center flex-1">
+                        <span className="text-[10px] font-mono text-[#a855f7] font-semibold">2. Auto Mapping Engine</span>
+                        <span className="text-[10px] text-zinc-400">Generate Kapasitas Sesi</span>
+                      </div>
+                      <div className="text-zinc-500 font-bold text-xs">➔</div>
+                      <div className="flex flex-col items-center gap-1 text-center flex-1">
+                        <span className="text-[10px] font-mono text-[#10b981] font-semibold">3. Sesi &amp; Audit Log</span>
+                        <span className="text-[10px] text-zinc-400">Deduct Sesi di prm_catatan</span>
+                      </div>
+                    </div>
+
+                    <ul className="space-y-2 mb-6 text-sm text-zinc-400">
+                      <li className="relative pl-5 before:content-['✓'] before:absolute before:left-0 before:text-[#60a5fa] before:font-bold">
+                        <strong>Billing-to-Package Pipeline:</strong> Konversi transaksi SKU paket kasir ke saldo kapasitas sesi pasien secara otomatis.
+                      </li>
+                      <li className="relative pl-5 before:content-['✓'] before:absolute before:left-0 before:text-[#60a5fa] before:font-bold">
+                        <strong>Session Deduction Protocol:</strong> Validasi tanggal kadaluarsa &amp; sisa sesi pasien dengan rollback safety &amp; immutable audit log.
+                      </li>
+                      <li className="relative pl-5 before:content-['✓'] before:absolute before:left-0 before:text-[#60a5fa] before:font-bold">
+                        Arsitektur Backend <strong>PHP 8 REST-like API</strong> dengan PDO query protection &amp; Material Design 3 tokenized UI.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-col gap-4">
+                    <div className="flex flex-wrap gap-1.5">
+                      {["Vanilla JS SPA", "PHP 8 REST API", "MySQL dbold", "Material Design 3", "TailwindCSS", "Gemini AI"].map((tag) => (
+                        <span key={tag} className="bg-white/3 border border-white/5 rounded-md px-3 py-1 text-[10px] text-zinc-400">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <a 
+                      href="https://github.com/louismax12/prm_rkz.git" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="self-start text-xs font-semibold text-[#60a5fa] border border-[#3b82f6]/30 rounded-xl px-5 py-2.5 bg-[#3b82f6]/5 transition-all duration-300 hover:bg-[#3b82f6] hover:text-white hover:shadow-[0_0_15px_rgba(59,130,246,0.4)] flex items-center gap-2"
+                    >
+                      <GithubIcon className="w-4 h-4" /> Buka GitHub Repository
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Slide 3: Procurement PO & Surat Pesanan System (Gemini AI Project) */}
+              <div className="px-2.5 box-border flex justify-center" style={{ width: `${100 / totalSlides}%` }}>
+                <div className="w-full bg-[#12141b]/65 border border-[#a855f7]/30 rounded-3xl p-8 relative flex flex-col justify-between bg-gradient-to-b from-[#a855f7]/5 via-[#12141b]/70 to-[#12141b]/90 hover:border-[#a855f7]/60 transition-all duration-300 shadow-xl">
+                  <div className="absolute top-6 right-8 text-[9px] font-bold tracking-widest text-[#c084fc] bg-[#a855f7]/10 border border-[#a855f7]/30 rounded-full px-3 py-1 flex items-center gap-1.5 shadow-[0_0_10px_rgba(168,85,247,0.2)]">
+                    <Sparkles size={11} className="text-[#c084fc]" /> GEMINI AI ASSISTED
+                  </div>
+                  
+                  <div className="flex flex-col">
+                    <span className="font-mono text-xs text-zinc-400 font-semibold uppercase flex items-center gap-2 mb-3">
+                      <Server size={14} className="text-[#c084fc]" /> Corporate Procurement System
+                    </span>
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-4 pr-32">
+                      Sistem Surat Pesanan &amp; Pengadaan PO (SP Umum)
+                    </h3>
+                    <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
+                      Aplikasi pengelolaan proses pengadaan barang (Purchase Order / PO) berjenjang. Memfasilitasi alur pembuatan draft, pengajuan, persetujuan direksi, penerimaan barang parsial, hingga klaim pembayaran.
+                    </p>
+                    
+                    {/* Workflow Diagram Box */}
+                    <div className="flex flex-col sm:flex-row items-center justify-between bg-black/30 border border-white/5 rounded-2xl p-4 mb-6 gap-3 sm:gap-0">
+                      <div className="flex flex-col items-center gap-1 text-center flex-1">
+                        <span className="text-[10px] font-mono text-[#64748b] font-semibold">1. Draft &amp; Ajukan</span>
+                        <span className="text-[10px] text-zinc-400">Input Item Pesanan</span>
+                      </div>
+                      <div className="text-zinc-500 font-bold text-xs">➔</div>
+                      <div className="flex flex-col items-center gap-1 text-center flex-1">
+                        <span className="text-[10px] font-mono text-[#d97706] font-semibold">2. Multi Review</span>
+                        <span className="text-[10px] text-zinc-400">Verifikasi Staff &amp; Manager</span>
+                      </div>
+                      <div className="text-zinc-500 font-bold text-xs">➔</div>
+                      <div className="flex flex-col items-center gap-1 text-center flex-1">
+                        <span className="text-[10px] font-mono text-[#059669] font-semibold">3. ACC Direktur</span>
+                        <span className="text-[10px] text-zinc-400">Penerimaan &amp; Pembayaran</span>
+                      </div>
+                    </div>
+
+                    <ul className="space-y-2 mb-6 text-sm text-zinc-400">
+                      <li className="relative pl-5 before:content-['✓'] before:absolute before:left-0 before:text-[#c084fc] before:font-bold">
+                        <strong>Workflow Approval Multi-Tier:</strong> Pengawasan alur persetujuan PO secara real-time (<code className="text-[#c084fc]">draft</code> → <code className="text-[#c084fc]">diajukan</code> → <code className="text-[#c084fc]">direview</code> → <code className="text-[#c084fc]">acc</code> → <code className="text-[#c084fc]">ditolak</code>).
+                      </li>
+                      <li className="relative pl-5 before:content-['✓'] before:absolute before:left-0 before:text-[#c084fc] before:font-bold">
+                        <strong>Role-Based Access Control (RBAC):</strong> Integrasi hak akses spesifik untuk staff, reviewer, dan direktur melalui tabel <code className="text-[#c084fc]">sp_usermenu</code>.
+                      </li>
+                      <li className="relative pl-5 before:content-['✓'] before:absolute before:left-0 before:text-[#c084fc] before:font-bold">
+                        Integrasi Multi-Database Schema (Database Utama SP, HRD User Authentication, dan Askes Supplier Master).
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-col gap-4">
+                    <div className="flex flex-wrap gap-1.5">
+                      {["PHP 8", "MySQL", "PO Procurement", "Multi-Level Approval", "RBAC", "Outfit & Inter Fonts", "Gemini AI"].map((tag) => (
+                        <span key={tag} className="bg-white/3 border border-white/5 rounded-md px-3 py-1 text-[10px] text-zinc-400">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <a 
+                      href="https://github.com/louismax12/sp_umum.git" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="self-start text-xs font-semibold text-[#c084fc] border border-[#a855f7]/30 rounded-xl px-5 py-2.5 bg-[#a855f7]/5 transition-all duration-300 hover:bg-[#a855f7] hover:text-white hover:shadow-[0_0_15px_rgba(168,85,247,0.4)] flex items-center gap-2"
+                    >
+                      <GithubIcon className="w-4 h-4" /> Buka GitHub Repository
+                    </a>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Slide 4: YOLO v11 Riset */}
+              <div className="px-2.5 box-border flex justify-center" style={{ width: `${100 / totalSlides}%` }}>
                 <div className="w-full bg-[#12141b]/65 border border-[#a855f7]/25 rounded-3xl p-8 relative flex flex-col justify-between bg-gradient-to-b from-[#a855f7]/3 to-[#12141b]/65">
                   <div className="absolute top-6 right-8 text-[9px] font-bold tracking-widest text-white bg-gradient-to-r from-[#a855f7] to-[#d946ef] rounded-full px-3 py-1">
                     RISET UTAMA
@@ -698,8 +900,8 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Slide 2: AI Auto Clipper Tool */}
-              <div className="w-[33.33333%] px-2.5 box-border flex justify-center">
+              {/* Slide 5: AI Auto Clipper Tool */}
+              <div className="px-2.5 box-border flex justify-center" style={{ width: `${100 / totalSlides}%` }}>
                 <div className="w-full bg-[#12141b]/65 border border-white/5 rounded-3xl p-8 relative flex flex-col justify-between hover:border-white/10">
                   <div className="flex flex-col">
                     <span className="font-mono text-xs text-zinc-500 font-semibold uppercase flex items-center gap-2 mb-3">
@@ -761,8 +963,8 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Slide 3: Web Profile & POS Desktop (Grid layout page) */}
-              <div className="w-[33.33333%] px-2.5 box-border">
+              {/* Slide 6: Web Profile & POS Desktop (Grid layout page) */}
+              <div className="px-2.5 box-border" style={{ width: `${100 / totalSlides}%` }}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
                   
                   {/* Web App Card */}
