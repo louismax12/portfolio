@@ -793,7 +793,7 @@ export default function Home() {
                     </div>
 
                     {/* Screenshot Gallery Thumbnails for PRM RKZ */}
-                    <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 mb-6">
+                    <div className="grid grid-cols-3 sm:grid-cols-6 gap-2.5 mb-6">
                       <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
                         <Image src="/img/prm_rkz_preview_login.png" alt="Portal Login PRM RKZ" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
                         <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-[#60a5fa] font-semibold">Portal Login</span>
@@ -811,8 +811,12 @@ export default function Home() {
                         <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-[#10b981] font-semibold">Pemakaian Sesi</span>
                       </div>
                       <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
-                        <Image src="/img/prm_rkz_preview_master.png" alt="Master Data Konfigurasi" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
-                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-zinc-300">Master Data</span>
+                        <Image src="/img/prm_rkz_preview_audit.png" alt="Laporan & Audit Analytics" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-[#a855f7] font-semibold">Audit Log</span>
+                      </div>
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/prm_rkz_preview_editpaket.png" alt="Modal Edit Master Paket" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-zinc-300">Edit Paket</span>
                       </div>
                     </div>
                     
