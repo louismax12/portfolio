@@ -1071,21 +1071,39 @@ export default function Home() {
                       Software automasi bertenaga AI untuk memotong video berdurasi panjang dari YouTube, Live Stream, atau Podcast menjadi klip vertikal pendek (rasio 9:16) secara otomatis.
                     </p>
 
-                    {/* Clipper visual preview (Tailwind build) */}
-                    <div className="bg-black/25 border border-white/5 rounded-2xl p-4 mb-6 flex flex-col items-center gap-3">
-                      <div className="w-full flex items-center gap-2">
-                        <span className="font-mono text-[9px] text-zinc-500">00:00</span>
-                        <div className="flex-1 h-1.5 bg-white/10 rounded-full relative">
-                          <div className="absolute top-0 left-[20%] w-[15%] h-full bg-[#00f2fe] rounded-full shadow-[0_0_8px_#00f2fe]" />
-                          <div className="absolute top-0 left-[60%] w-[10%] h-full bg-[#00f2fe] rounded-full shadow-[0_0_8px_#00f2fe]" />
+                    {/* Real UI Screenshot Frame Bar for Tools-Auto-Clipper-AI */}
+                    <div className="w-full bg-[#0a0b0e] border border-white/10 rounded-2xl overflow-hidden shadow-2xl mb-6 group">
+                      <div className="bg-[#181a20] px-4 py-2 flex items-center gap-2 border-b border-white/5">
+                        <div className="flex gap-1.5">
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f56]" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]" />
+                          <div className="w-2.5 h-2.5 rounded-full bg-[#27c93f]" />
                         </div>
-                        <span className="font-mono text-[9px] text-zinc-500">30:00</span>
+                        <div className="flex-1 text-center">
+                          <span className="bg-[#0a0b0e]/80 text-zinc-400 font-mono text-[10px] px-4 py-1 rounded-full border border-white/5 inline-block">
+                            http://127.0.0.1:8001 (YouTube Downloader &amp; Auto Clipper)
+                          </span>
+                        </div>
                       </div>
-                      <span className="font-mono text-[9px] text-zinc-500 flex items-center gap-1.5">
-                        ↓ AI Crop &amp; Subtitle
-                      </span>
-                      <div className="w-[50px] h-[75px] border border-[#00f2fe] rounded-md flex flex-col items-center justify-center text-[#00f2fe] text-[8px] pulse-border-animation">
-                        <Laptop size={14} className="mb-1" /> 9:16 Vertical
+                      <div className="relative w-full h-[200px] md:h-[230px] overflow-hidden bg-[#0a0b0e]">
+                        <Image 
+                          src="/img/autoclipper_preview.png" 
+                          alt="Tools-Auto-Clipper-AI Real UI Screenshot" 
+                          fill 
+                          className="object-cover object-top group-hover:scale-105 transition-transform duration-500" 
+                        />
+                      </div>
+                    </div>
+
+                    {/* Screenshot Gallery Thumbnails for Auto Clipper */}
+                    <div className="grid grid-cols-2 gap-3 mb-6">
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/autoclipper_preview.png" alt="YouTube Downloader Form UI" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-[#ff4b4b] font-semibold">Downloader UI</span>
+                      </div>
+                      <div className="relative h-20 rounded-xl overflow-hidden border border-white/10 bg-black group/thumb">
+                        <Image src="/img/autoclipper_preview_download.png" alt="Download Progress & Toast Status" fill className="object-cover object-top group-hover/thumb:scale-110 transition-transform duration-300" />
+                        <span className="absolute bottom-1 left-1.5 text-[8px] font-mono bg-black/70 px-1.5 py-0.5 rounded text-[#00f2fe] font-semibold">Download Progress</span>
                       </div>
                     </div>
 
