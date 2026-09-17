@@ -684,17 +684,17 @@ export default function Home() {
                         </div>
                         <div className="flex-1 text-center">
                           <a 
-                            href="https://komsosmtb.fun/avere/" 
+                            href="https://avere.brdigital.click/" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="bg-[#0a0b0e]/80 text-[#00f2fe] hover:text-white hover:underline font-mono text-[10px] px-4 py-1 rounded-full border border-[#00f2fe]/30 inline-flex items-center gap-1.5 transition-colors cursor-pointer"
                           >
-                            https://komsosmtb.fun/avere/ <ExternalLink size={10} />
+                            https://avere.brdigital.click/ <ExternalLink size={10} />
                           </a>
                         </div>
                       </div>
                       <a 
-                        href="https://komsosmtb.fun/avere/" 
+                        href="https://avere.brdigital.click/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="relative w-full h-[220px] md:h-[260px] overflow-hidden bg-[#0a0b0e] block cursor-pointer"
@@ -751,7 +751,7 @@ export default function Home() {
                     </div>
                     <div className="flex flex-wrap items-center gap-3">
                       <a 
-                        href="https://komsosmtb.fun/avere/" 
+                        href="https://avere.brdigital.click/" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-xs font-semibold text-black bg-[#00f2fe] border border-[#00f2fe] rounded-xl px-5 py-2.5 transition-all duration-300 hover:bg-[#00f2fe]/90 hover:shadow-[0_0_15px_rgba(0,242,254,0.5)] flex items-center gap-2"
