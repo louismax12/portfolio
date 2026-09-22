@@ -1320,8 +1320,8 @@ export default function Home() {
             </div>
             <div className="space-y-6">
               {[
-                { name: "Network Routing & Mikrotik Boards", percent: "88%", color: "from-[#a855f7] to-[#d946ef]" },
-                { name: "Cybersecurity & Network Auditing", percent: "80%", color: "from-[#a855f7] to-[#d946ef]" },
+                { name: "Network Routing & Mikrotik Boards", percent: "78%", color: "from-[#a855f7] to-[#d946ef]" },
+                { name: "Cybersecurity & Network Auditing", percent: "40%", color: "from-[#a855f7] to-[#d946ef]" },
                 { name: "CCTV IP & Monitoring Systems", percent: "85%", color: "from-[#a855f7] to-[#d946ef]" },
                 { name: "IT Support L2/L3 & Maintenance", percent: "82%", color: "from-[#a855f7] to-[#d946ef]" }
               ].map((skill) => (
@@ -1349,8 +1349,8 @@ export default function Home() {
             </div>
             <div className="space-y-6">
               {[
-                { name: "Computer Vision (YOLO v11, OpenCV)", percent: "85%", color: "from-[#d946ef] to-[#ec4899]" },
-                { name: "Python Programming", percent: "82%", color: "from-[#d946ef] to-[#ec4899]" },
+                { name: "Computer Vision (YOLO v11, OpenCV)", percent: "75%", color: "from-[#d946ef] to-[#ec4899]" },
+                { name: "Python Programming", percent: "72%", color: "from-[#d946ef] to-[#ec4899]" },
                 { name: "Raspberry Pi & Hardware", percent: "78%", color: "from-[#d946ef] to-[#ec4899]" },
                 { name: "AI Automate Workflows", percent: "80%", color: "from-[#d946ef] to-[#ec4899]" }
               ].map((skill) => (
