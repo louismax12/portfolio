@@ -69,7 +69,7 @@ export default function Home() {
   
   // Refs
   const skillsRef = useRef<HTMLElement>(null);
-  const totalSlides = 6;
+  const totalSlides = 7;
 
   // ==========================================================================
   // EFFECT HOOKS
@@ -1263,6 +1263,64 @@ export default function Home() {
                     </div>
                   </div>
 
+                </div>
+              </div>
+
+              {/* Slide 7: 3D Voxel Ocean Simulation (Creative Coding) */}
+              <div className="px-2.5 box-border flex justify-center" style={{ width: `${100 / totalSlides}%` }}>
+                <div className="w-full bg-[#12141b]/65 border border-[#00f2fe]/30 rounded-3xl p-8 relative flex flex-col justify-between bg-gradient-to-b from-[#00f2fe]/5 via-[#12141b]/70 to-[#12141b]/90 hover:border-[#00f2fe]/60 transition-all duration-300 shadow-xl overflow-hidden group min-h-[500px]">
+                  <div className="absolute top-6 right-8 text-[9px] font-bold tracking-widest text-[#00f2fe] bg-[#00f2fe]/10 border border-[#00f2fe]/30 rounded-full px-3 py-1 flex items-center gap-1.5 shadow-[0_0_10px_rgba(0,242,254,0.2)] z-10 pointer-events-none">
+                    <Sparkles size={11} className="text-[#00f2fe]" /> CREATIVE CODING
+                  </div>
+                  
+                  <div className="relative z-10 flex flex-col pointer-events-none">
+                    <span className="font-mono text-xs text-zinc-400 font-semibold uppercase flex items-center gap-2 mb-3">
+                      <Laptop size={14} className="text-[#00f2fe]" /> 3D WebGL Simulation
+                    </span>
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-4 pr-32 drop-shadow-lg">
+                      Interactive 3D Voxel Ocean
+                    </h3>
+                    <p className="text-zinc-300 text-sm mb-6 leading-relaxed w-full md:w-2/3 backdrop-blur-md bg-black/40 p-4 rounded-xl border border-white/10 pointer-events-auto drop-shadow-xl">
+                      Simulasi laut prosedural 3D menggunakan Three.js dan InstancedMesh. Menampilkan perhitungan gelombang matematis dengan pewarnaan dinamis berdasarkan ketinggian voxel (height mapping).
+                    </p>
+                    <ul className="space-y-2 mb-6 text-sm text-zinc-300 w-full md:w-2/3 backdrop-blur-md bg-black/40 p-4 rounded-xl border border-white/10 pointer-events-auto drop-shadow-xl">
+                      <li className="relative pl-5 before:content-['✓'] before:absolute before:left-0 before:text-[#00f2fe] before:font-bold">
+                        Rendering ribuan voxel secara instan dan efisien.
+                      </li>
+                      <li className="relative pl-5 before:content-['✓'] before:absolute before:left-0 before:text-[#00f2fe] before:font-bold">
+                        Dapat diinteraksikan secara full 360° menggunakan kursor (Orbit Controls).
+                      </li>
+                    </ul>
+                  </div>
+
+                  {/* 3D Iframe Window */}
+                  <div className="absolute inset-0 z-0">
+                    <iframe 
+                      src="/3d-ocean.html" 
+                      className="w-full h-full border-none opacity-40 group-hover:opacity-100 transition-opacity duration-700"
+                      title="3D Voxel Ocean"
+                    />
+                  </div>
+
+                  <div className="relative z-10 flex flex-col gap-4 mt-auto pointer-events-auto">
+                    <div className="flex flex-wrap gap-1.5">
+                      {["Three.js", "WebGL", "Voxel Graphics", "Math Simulation"].map((tag) => (
+                        <span key={tag} className="bg-black/50 backdrop-blur-md border border-white/10 rounded-md px-3 py-1 text-[10px] text-zinc-300">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="flex flex-wrap items-center gap-3">
+                      <a 
+                        href="/3d-ocean.html" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-xs font-semibold text-black bg-[#00f2fe] border border-[#00f2fe] rounded-xl px-5 py-2.5 transition-all duration-300 hover:bg-[#00f2fe]/90 hover:shadow-[0_0_15px_rgba(0,242,254,0.5)] flex items-center gap-2"
+                      >
+                        <ExternalLink size={14} /> Buka Layar Penuh
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
 
