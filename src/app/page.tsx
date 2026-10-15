@@ -799,17 +799,17 @@ export default function Home() {
                         </div>
                         <div className="flex-1 text-center">
                           <a 
-                            href="https://komsosmtb.fun/prm_rkz/" 
+                            href="https://millian.fun/prm_rkz/" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="bg-[#0a0b0e]/80 text-[#60a5fa] hover:text-white hover:underline font-mono text-[10px] px-4 py-1 rounded-full border border-[#3b82f6]/30 inline-flex items-center gap-1.5 transition-colors cursor-pointer"
                           >
-                            https://komsosmtb.fun/prm_rkz/ <ExternalLink size={10} />
+                            https://millian.fun/prm_rkz/ <ExternalLink size={10} />
                           </a>
                         </div>
                       </div>
                       <a 
-                        href="https://komsosmtb.fun/prm_rkz/" 
+                        href="https://millian.fun/prm_rkz/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="relative w-full h-[220px] md:h-[260px] overflow-hidden bg-[#0a0b0e] block cursor-pointer"
@@ -892,7 +892,7 @@ export default function Home() {
                     </div>
                     <div className="flex flex-wrap items-center gap-3">
                       <a 
-                        href="https://komsosmtb.fun/prm_rkz/" 
+                        href="https://millian.fun/prm_rkz/" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-xs font-semibold text-white bg-[#3b82f6] border border-[#3b82f6] rounded-xl px-5 py-2.5 transition-all duration-300 hover:bg-[#3b82f6]/90 hover:shadow-[0_0_15px_rgba(59,130,246,0.5)] flex items-center gap-2"
@@ -940,17 +940,17 @@ export default function Home() {
                         </div>
                         <div className="flex-1 text-center">
                           <a 
-                            href="https://komsosmtb.fun/sp_umum/index.html" 
+                            href="https://millian.fun/sp_umum/index.html" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="bg-[#0a0b0e]/80 text-[#c084fc] hover:text-white hover:underline font-mono text-[10px] px-4 py-1 rounded-full border border-[#a855f7]/30 inline-flex items-center gap-1.5 transition-colors cursor-pointer"
                           >
-                            https://komsosmtb.fun/sp_umum/index.html <ExternalLink size={10} />
+                            https://millian.fun/sp_umum/index.html <ExternalLink size={10} />
                           </a>
                         </div>
                       </div>
                       <a 
-                        href="https://komsosmtb.fun/sp_umum/index.html" 
+                        href="https://millian.fun/sp_umum/index.html" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="relative w-full h-[220px] md:h-[260px] overflow-hidden bg-[#0a0b0e] block cursor-pointer"
@@ -1033,7 +1033,7 @@ export default function Home() {
                     </div>
                     <div className="flex flex-wrap items-center gap-3">
                       <a 
-                        href="https://komsosmtb.fun/sp_umum/index.html" 
+                        href="https://millian.fun/sp_umum/index.html" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-xs font-semibold text-white bg-[#a855f7] border border-[#a855f7] rounded-xl px-5 py-2.5 transition-all duration-300 hover:bg-[#a855f7]/90 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] flex items-center gap-2"
