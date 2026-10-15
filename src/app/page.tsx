@@ -945,7 +945,7 @@ export default function Home() {
                             rel="noopener noreferrer"
                             className="bg-[#0a0b0e]/80 text-[#c084fc] hover:text-white hover:underline font-mono text-[10px] px-4 py-1 rounded-full border border-[#a855f7]/30 inline-flex items-center gap-1.5 transition-colors cursor-pointer"
                           >
-                            https://spumum.millian.fun/index.html <ExternalLink size={10} />
+                            https://spumum.millian.fun/ <ExternalLink size={10} />
                           </a>
                         </div>
                       </div>
@@ -1033,7 +1033,7 @@ export default function Home() {
                     </div>
                     <div className="flex flex-wrap items-center gap-3">
                       <a 
-                        href="https://spumum.millian.fun/index.html" 
+                        href="https://spumum.millian.fun/" 
                         target="_blank" 
                         rel="noopener noreferrer" 
                         className="text-xs font-semibold text-white bg-[#a855f7] border border-[#a855f7] rounded-xl px-5 py-2.5 transition-all duration-300 hover:bg-[#a855f7]/90 hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] flex items-center gap-2"
