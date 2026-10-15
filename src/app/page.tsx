@@ -950,7 +950,7 @@ export default function Home() {
                         </div>
                       </div>
                       <a 
-                        href="https://spumum.millian.fun/index.html" 
+                        href="https://spumum.millian.fun/" 
                         target="_blank" 
                         rel="noopener noreferrer"
                         className="relative w-full h-[220px] md:h-[260px] overflow-hidden bg-[#0a0b0e] block cursor-pointer"
