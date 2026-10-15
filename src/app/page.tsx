@@ -940,7 +940,7 @@ export default function Home() {
                         </div>
                         <div className="flex-1 text-center">
                           <a 
-                            href="https://spumum.millian.fun/index.html" 
+                            href="https://spumum.millian.fun/" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="bg-[#0a0b0e]/80 text-[#c084fc] hover:text-white hover:underline font-mono text-[10px] px-4 py-1 rounded-full border border-[#a855f7]/30 inline-flex items-center gap-1.5 transition-colors cursor-pointer"
